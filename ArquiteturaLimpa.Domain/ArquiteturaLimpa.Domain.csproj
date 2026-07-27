@@ -5,14 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Accounts\Entities\" />
-    <Folder Include="Accounts\" />
-    <Folder Include="Accounts\ValueObjects\" />
     <Folder Include="Backoffice\" />
     <Folder Include="Player\Entities\" />
     <Folder Include="Player\ValueObjects\" />
     <Folder Include="Store\" />
-    <Folder Include="Shared\" />
   </ItemGroup>
 
 </Project>

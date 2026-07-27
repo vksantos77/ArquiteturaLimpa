@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ArquiteturaLimpa.Domain.Test/ArquiteturaLimpa.Domain.Test.csproj" Id="1f53b349-09a0-4621-aa93-356b79f88819" />
   <Project Path="ArquiteturaLimpa.Domain/ArquiteturaLimpa.Domain.csproj" />
 </Solution>
