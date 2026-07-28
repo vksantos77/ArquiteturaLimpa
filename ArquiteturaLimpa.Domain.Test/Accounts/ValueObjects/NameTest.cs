@@ -1,4 +1,5 @@
 ﻿using ArquiteturaLimpa.Domain.Accounts.ValueObjects;
+using ArquiteturaLimpa.Domain.Accounts.ValueObjects.Exceptions;
 
 namespace ArquiteturaLimpa.Domain.Test.Accounts.ValueObjects
 {    
@@ -17,10 +18,22 @@ namespace ArquiteturaLimpa.Domain.Test.Accounts.ValueObjects
             string data = _name;
             Assert.Equal("Vitor Teste", data);
         }
+
         [Fact]
-        public void ShouldImplicitConvertStringToName()
+        public void ShouldCreateNewName()
         {
-            Assert.Fail();
+            var name = Name.Create("Vitor", "Teste");
+            Assert.Equal("Vitor Teste", name.ToString());
+        }
+
+        [Fact]
+        public void ShouldFailIfFirstNameLenghtIsNotValid()
+        {
+            
+            Assert.Throws<InvalidFirstNameLenghtException>(() =>
+            {
+                var name = Name.Create("a", "Teste");
+            });
         }
     }
 }
