@@ -35,5 +35,14 @@ namespace ArquiteturaLimpa.Domain.Test.Accounts.ValueObjects
                 var name = Name.Create("a", "Teste");
             });
         }
+        [Fact]
+        public void ShouldFailIfLastNameLenghtIsNotValid()
+        {
+
+            Assert.Throws<InvalidLastNameLenghtException>(() =>
+            {
+                var name = Name.Create("Teste", "a");
+            });
+        }
     }
 }

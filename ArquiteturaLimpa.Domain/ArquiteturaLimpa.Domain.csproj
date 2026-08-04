@@ -11,4 +11,8 @@
     <Folder Include="Store\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Accounts\ValueObjects\Exceptions\InvalidLastNameLenghtException.cs" />
+  </ItemGroup>
+
 </Project>

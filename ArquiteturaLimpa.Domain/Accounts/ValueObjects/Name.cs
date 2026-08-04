@@ -28,15 +28,15 @@ namespace ArquiteturaLimpa.Domain.Accounts.ValueObjects
             }
             if (firstName.Length >= MaxLength)
             {
-                throw new Exception("First name cannot be empty.");
+                throw new InvalidFirstNameLenghtException("First name cannot be empty.");
             }
             if (lastName.Length <= MinLength)
             {
-                throw new Exception("First name cannot be empty.");
+                throw new InvalidLastNameLenghtException("First name cannot be empty.");
             }
             if (lastName.Length >= MaxLength)
             {
-                throw new Exception("First name cannot be empty.");
+                throw new InvalidLastNameLenghtException("First name cannot be empty.");
             }
             return new Name(firstName, lastName);
         }
